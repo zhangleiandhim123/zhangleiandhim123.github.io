@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="Latex基础—数学输入进阶— 方程组的输入除了基本的数学公式外，有时需要输入复杂的公式，比如矩阵、方程组、张量、复杂的微分方程组等等，下面磊哥哥就介绍下几种复杂公式的输入方式：">
+<meta name="description" content="除了基本的数学公式外，有时需要输入复杂的公式，比如矩阵、方程组、张量、复杂的微分方程组等等，下面磊哥哥就介绍下几种复杂公式的输入方式：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Latex基础—数学输入进阶—方程组的输入">
 <meta property="og:url" content="http://yoursite.com/2016/06/24/Latex基础—数学输入进阶—-方程组的输入/index.html">
 <meta property="og:site_name" content="磊哥哥">
-<meta property="og:description" content="Latex基础—数学输入进阶— 方程组的输入除了基本的数学公式外，有时需要输入复杂的公式，比如矩阵、方程组、张量、复杂的微分方程组等等，下面磊哥哥就介绍下几种复杂公式的输入方式：">
-<meta property="og:updated_time" content="2016-06-24T14:16:46.000Z">
+<meta property="og:description" content="除了基本的数学公式外，有时需要输入复杂的公式，比如矩阵、方程组、张量、复杂的微分方程组等等，下面磊哥哥就介绍下几种复杂公式的输入方式：">
+<meta property="og:updated_time" content="2016-06-24T14:25:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Latex基础—数学输入进阶—方程组的输入">
-<meta name="twitter:description" content="Latex基础—数学输入进阶— 方程组的输入除了基本的数学公式外，有时需要输入复杂的公式，比如矩阵、方程组、张量、复杂的微分方程组等等，下面磊哥哥就介绍下几种复杂公式的输入方式：">
+<meta name="twitter:description" content="除了基本的数学公式外，有时需要输入复杂的公式，比如矩阵、方程组、张量、复杂的微分方程组等等，下面磊哥哥就介绍下几种复杂公式的输入方式：">
 
 
 
@@ -296,7 +296,9 @@
       
 
       
-        <h1 id="Latex基础—数学输入进阶—-方程组的输入"><a href="#Latex基础—数学输入进阶—-方程组的输入" class="headerlink" title="Latex基础—数学输入进阶— 方程组的输入"></a>Latex基础—数学输入进阶— 方程组的输入</h1><p>除了基本的数学公式外，有时需要输入复杂的公式，比如矩阵、方程组、张量、复杂的微分方程组等等，下面磊哥哥就介绍下几种复杂公式的输入方式：</p>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<p>除了基本的数学公式外，有时需要输入复杂的公式，比如矩阵、方程组、张量、复杂的微分方程组等等，下面磊哥哥就介绍下几种复杂公式的输入方式：</p>
 <a id="more"></a>
 <h2 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h2><p>使用<code>begin{array}</code>宏包，例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">  %</span><br><span class="line">	\begin&#123;array&#125;&#123;l&#125;%array宏包只能在equation宏包里使用，这里，l是方程左对齐，还有r和c</span><br><span class="line">	\bm&#123;M&#125;\dot&#123;\bm&#123;u&#125;&#125; + \bm&#123;\Phi&#125;^T(\bm&#123;p&#125;)\bm&#123;\lambda&#125; = \left(\bm&#123;\Pi&#125;^P\right)^T\bm&#123;f&#125; \\</span><br><span class="line">	\\</span><br><span class="line">	\bm&#123;\Gamma&#125;-\bm&#123;B&#125;^T\bm&#123;\vec&#123;J&#125;&#125;\bm&#123;B&#125;\bm&#123;\xi&#125;=\bm&#123;0&#125;\\</span><br><span class="line">	\\</span><br><span class="line">	\dot&#123;\bm&#123;\Gamma&#125;&#125; - \left(\frac&#123;\partial \bm&#123;K&#125;&#125;&#123;\partial \bm&#123;\varepsilon&#125;&#125;\right)^T + \bm&#123;\Phi&#125;^T(\bm&#123;\varepsilon&#125;)\bm&#123;\lambda&#125; = \left(\bm&#123;\Pi&#125;^R\right)^T\bm&#123;\vec&#123;n&#125;&#125;\\</span><br><span class="line">	\\</span><br><span class="line">	\dot&#123;\bm&#123;p&#125;&#125;-\bm&#123;u&#125; =\bm&#123;0&#125;\\</span><br><span class="line">	\\</span><br><span class="line">	\dot&#123;\bm&#123;\varepsilon&#125;&#125;	- \bm&#123;\xi&#125; = \bm&#123;0&#125;</span><br><span class="line">	\end&#123;array&#125;</span><br><span class="line">	%</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
@@ -522,7 +524,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Latex基础—数学输入进阶—-方程组的输入"><span class="nav-number">1.</span> <span class="nav-text">Latex基础—数学输入进阶— 方程组的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方程组"><span class="nav-number">1.1.</span> <span class="nav-text">方程组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未完待续，下一遍介绍矩阵输入的相关技巧"><span class="nav-number">1.2.</span> <span class="nav-text">未完待续，下一遍介绍矩阵输入的相关技巧</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方程组"><span class="nav-number">1.</span> <span class="nav-text">方程组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未完待续，下一遍介绍矩阵输入的相关技巧"><span class="nav-number">2.</span> <span class="nav-text">未完待续，下一遍介绍矩阵输入的相关技巧</span></a></li></ol></div>
             
           </div>
         </section>

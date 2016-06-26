@@ -107,9 +107,9 @@
 <p>比如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\setcounter&#123;mtc&#125;&#123;3&#125;%在intruduction章节前，已经有3个章节了，所以是3</span><br><span class="line">\input&#123;include/Introduction&#125;</span><br></pre></td></tr></table></figure>
 <p>效果如下图：</p>
-<p>  <img src="https://lh3.googleusercontent.com/7gbifwishiwQGUiKhuunMQ18dsjnxNxEl0a4U5kPlJqYzbPKdOAfhEGYyyrZRQ-AcxJdpEc45MRXoROcit-FRlWxuQQRXGYZeJ-6MJTAbokjI_zfUNIwYuC24wOeiDVQGeLb7deKpY2Hl3yZVzhVqvQn-Z3fvBlwqKLEzxsr4eAe5QBfsI-7At2RRfgVMVeD_8uM9xIPvKZDvhubUKYLO6SkncCzWOlqpLumPfPP5UZL8R19Fl7ZMtEudwI1Bw9xuF3HHz33b8GX0ocuCatH2-O7_cJzRISwOp5TMaky-B_ooVXeXhH9m-AdpJzliszzSad93PUjysLAutBeUh1lMpkH9Y_Fe4y_yWbEfLxSpmiD5vvGVh7GPFQEWNidBfjFvlwdaYR2q3Zozq_UsEHOyhUSXLuT3t3JDk-Y1SSp6HV12EP5MpUMq94MxK28iOALxNl7EopkHFF1SmOhJMh8c94Vc_FUf9CudfNhcgK79iC2j4XW1vW7jM2yHYIv0qkiduDmhTXygsu-04BcvfHC7IS68jkHvcIcy84SrBo4EDl7P_47fPmRGGDjS2CZiWsWUOcrJoOLuIPYKE2YpjoZbcw1ECi2ops=w415-h282-no" alt="效果"></p>
+<p>  <img src="/img/2-01.png" alt="2-01"></p>
 <p>整体效果:</p>
-<p>  <img src="https://lh3.googleusercontent.com/RZCdxRGnJiIfr4BNvsqhCzj7iobM3knlfcRBpTanMmFcqml26xCALm0THV2CiAURA6LAKmKjSJeHGLyr6jkueltIHjdB48x3mUOsoWsEQAUET7kE7bgEjV5PI9YGMUiOtaLmt7Rwf_I3gW6Eol5o0UW4ccAovrzWiclXs6OZ8Gsj0v4YtmNYZjxYAIJkzQ2GX8NhrJD7ZDvyuqTEYdPNmX6TaoEA_Z4XUwcb5wf6Cuagi26-2OozN4Y4l9erSXWJdmp_1sAuW2OnzNQ5LwPLebSTvIBYdvkNbRPgTvuWMNNtsJJp2meoHw-UkDUZUGmFLdzRWmH_EmepFXLCk0N76Rmu-H60vttOvLYgGrrpGvxFANnfMY6FN2yLLH2JRhL4TnwxRQ7LMQsnrGscgr6ZjvxuZnVOkqjBgEaIDL5a0WbchBRUqjAp_SCQ79RTiXicgq6elZqyyMM4ylmjjXbndXrLP-QcPPHZmYW6qIzM5kjiriXj3j-G07H4FWfEzCCCYrvvEuC3rW4b8QEqLK9lmI6UF_hVr8wjnXC6sUtJhhUMSkYTF7D9dRN_XPG1KFE0isz896JKG-wSljAt-6a6cxywCHvsH_s=w308-h778-no" alt="效果"></p>
+<p> <img src="/img/2-02.png" alt="2-02"></p>
 ]]></content>
     </entry>
     

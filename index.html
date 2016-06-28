@@ -291,8 +291,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/06/26/搭建Hexo个人静态博客教程-Hexo篇/" itemprop="url">
-                  Hexo静态博客搭建基础—Hexo的安装与设置
+                <a class="post-title-link" href="/2016/06/28/Latex基础-数学输入进阶-矩阵的输入/" itemprop="url">
+                  Latex基础--数学输入进阶--矩阵的输入
                 </a>
               
             
@@ -305,8 +305,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-26T23:27:14+02:00" content="2016-06-26">
-              2016-06-26
+            <time itemprop="dateCreated" datetime="2016-06-28T16:03:33+02:00" content="2016-06-28">
+              2016-06-28
             </time>
           </span>
 
@@ -319,8 +319,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Hexo博客搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo博客搭建</span>
+                  <a href="/categories/Latex学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Latex学习</span>
                   </a>
                 </span>
 
@@ -335,8 +335,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/26/搭建Hexo个人静态博客教程-Hexo篇/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/26/搭建Hexo个人静态博客教程-Hexo篇/" itemprop="commentsCount"></span>
+                <a href="/2016/06/28/Latex基础-数学输入进阶-矩阵的输入/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/28/Latex基础-数学输入进阶-矩阵的输入/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -346,7 +346,7 @@
 
           
           
-             <span id="/2016/06/26/搭建Hexo个人静态博客教程-Hexo篇/" class="leancloud_visitors" data-flag-title="Hexo静态博客搭建基础—Hexo的安装与设置">
+             <span id="/2016/06/28/Latex基础-数学输入进阶-矩阵的输入/" class="leancloud_visitors" data-flag-title="Latex基础--数学输入进阶--矩阵的输入">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -370,8 +370,35 @@
       
         
           
-            <h1 id="hexo的安装与设置"><a href="#hexo的安装与设置" class="headerlink" title="hexo的安装与设置"></a>hexo的安装与设置</h1><p>hecto的安装非常简单，只需要在</p>
-
+            <h2 id="在数学环境下，使用array宏包："><a href="#在数学环境下，使用array宏包：" class="headerlink" title="在数学环境下，使用array宏包："></a>在数学环境下，使用<code>array</code>宏包：</h2><p>如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\left[</span><br><span class="line">\begin&#123;array&#125;&#123;ccc&#125;</span><br><span class="line">a_1 &amp; a_2 &amp; a_3\\</span><br><span class="line">b_1 &amp; b_2 &amp; b_3\\</span><br><span class="line">c_1 &amp; c_2 &amp; c_3</span><br><span class="line">\end&#123;array&#125;</span><br><span class="line">\right]</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p>编译效果：<br>$$<br>\left[<br>\begin{array}{ccc}<br>a_1 &amp; a_2 &amp; a_3\\<br>b_1 &amp; b_2 &amp; b_3\\<br>c_1 &amp; c_2 &amp; c_3<br>\end{array}<br>\right]<br>$$<br>这种方式还可以书写增广矩阵，如下所示：<br>$$<br>\left[<br>\begin{array}{cc|c}<br>a_1 &amp; a_2 &amp; a_3\\<br>b_1 &amp; b_2 &amp; b_3\\<br>c_1 &amp; c_2 &amp; c_3<br>\end{array}<br>\right]<br>$$<br>可以书写行间矩阵，比如，这个矩阵$\left[<br>\begin{array}{ccc}<br>a_1 &amp; a_2 &amp; a_3\\<br>b_1 &amp; b_2 &amp; b_3\\<br>c_1 &amp; c_2 &amp; c_3<br>\end{array}<br>\right]$是在行间书写的。</p>
+<h2 id="在数学环境下，使用Matrix宏包"><a href="#在数学环境下，使用Matrix宏包" class="headerlink" title="在数学环境下，使用Matrix宏包"></a>在数学环境下，使用<code>Matrix</code>宏包</h2><p>用法和<code>array</code>类似，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\left[</span><br><span class="line">\begin&#123;matrix&#125;</span><br><span class="line">a_1 &amp; a_2 &amp; a_3\\</span><br><span class="line">b_1 &amp; b_2 &amp; b_3\\</span><br><span class="line">c_1 &amp; c_2 &amp; c_3</span><br><span class="line">\end&#123;matrix&#125;</span><br><span class="line">\right]</span><br></pre></td></tr></table></figure>
+<p>效果如下：<br>$$<br>\left[<br>\begin{matrix}<br>a_1 &amp; a_2 &amp; a_3\\<br>b_1 &amp; b_2 &amp; b_3\\<br>c_1 &amp; c_2 &amp; c_3<br>\end{matrix}<br>\right]<br>$$<br>如果觉得输入<code>left{   rigth}</code> 太麻烦，还可以使用基于<code>matrix</code>的拓展宏包，如：</p>
+<ul>
+<li>pmatrix：用小括号括起来的矩阵。</li>
+<li>bmatrix：用中括号括起来。</li>
+<li>Bmatrix：用大括号括起来。</li>
+<li>vmatrix：用单竖线括起来。（行列式）</li>
+<li>Vmatrix：用双竖线括起来。（行列式的模）</li>
+</ul>
+<p>代码举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;Vmatrix&#125;</span><br><span class="line">a_1 &amp; a_2 &amp; a_3\\</span><br><span class="line">b_1 &amp; b_2 &amp; b_3\\</span><br><span class="line">c_1 &amp; c_2 &amp; c_3</span><br><span class="line">\end&#123;Vmatrix&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p>编译如下：<br>$$<br>\begin{Vmatrix}<br>a_1 &amp; a_2 &amp; a_3\\<br>b_1 &amp; b_2 &amp; b_3\\<br>c_1 &amp; c_2 &amp; c_3<br>\end{Vmatrix}<br>$$</p>
+<h2 id="矩阵里的省略符号"><a href="#矩阵里的省略符号" class="headerlink" title="矩阵里的省略符号"></a>矩阵里的省略符号</h2><p>省略符号如下：</p>
+<ul>
+<li><code>\cdots</code>：水平三个点</li>
+<li><code>\vdots</code>：竖直三个点</li>
+<li><code>\ddots</code>：对角线三个点</li>
+</ul>
+<p>代码举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;Bmatrix&#125;</span><br><span class="line">a_1 &amp; a_2 &amp; \cdots\\</span><br><span class="line">\vdots &amp; \ddots &amp; b_3\\</span><br><span class="line">c_1 &amp; c_2 &amp; c_3</span><br><span class="line">\end&#123;Bmatrix&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p>编译如下：<br>$$<br>\begin{Bmatrix}<br>a_1 &amp; a_2 &amp; \cdots\\<br>\vdots &amp; \ddots &amp; b_3\\<br>c_1 &amp; c_2 &amp; c_3<br>\end{Bmatrix}<br>$$</p>
+<h2 id="行间小矩阵"><a href="#行间小矩阵" class="headerlink" title="行间小矩阵"></a>行间小矩阵</h2><p>除了使用<code>`array</code>宏包以外，还可以使用<code>smallmatrix</code>宏包，这个宏包在行间的渲染效果要比<code>array</code>好，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\bigl( \begin&#123;smallmatrix&#125; a &amp; b \\ c&amp;d \end&#123;smallmatrix&#125;\bigr)$</span><br></pre></td></tr></table></figure>
+<p>在句中的渲染效果$\bigl( \begin{smallmatrix} a &amp; b \\ c&amp;d \end{smallmatrix}\bigr)$。</p>
+<h2 id="欢迎关注磊哥哥的个人博客，下篇文章介绍向量的输入"><a href="#欢迎关注磊哥哥的个人博客，下篇文章介绍向量的输入" class="headerlink" title="欢迎关注磊哥哥的个人博客，下篇文章介绍向量的输入"></a>欢迎关注磊哥哥的个人博客，下篇文章介绍向量的输入</h2>
           
         
       
@@ -631,7 +658,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="/img/link.jpeg" rel="gallery_cipzf5oy8000dp4oide7ootgk"
+                 href="/img/link.jpeg" rel="gallery_cipzjyyyd00099coiuvwquvjy"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/img/link.jpeg" itemprop="contentUrl"/>
               </a>

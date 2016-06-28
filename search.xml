@@ -4,13 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[新文章]]></title>
-      <url>http://yoursite.com/2016/06/28/%E6%96%B0%E6%96%87%E7%AB%A0/</url>
-      <content type="html"><![CDATA[<h1 id="这是新文章"><a href="#这是新文章" class="headerlink" title="这是新文章"></a>这是新文章</h1><h2 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h2><p>我家zhaskldajsdla<br>$$<br>\frac{1}{2}<br>$$</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Hexo静态博客搭建基础—Hexo的安装与设置]]></title>
       <url>http://yoursite.com/2016/06/26/%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B-Hexo%E7%AF%87/</url>
       <content type="html"><![CDATA[<h1 id="hexo的安装与设置"><a href="#hexo的安装与设置" class="headerlink" title="hexo的安装与设置"></a>hexo的安装与设置</h1><p>hecto的安装非常简单，只需要在</p>

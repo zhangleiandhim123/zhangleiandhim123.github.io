@@ -4,6 +4,20 @@
   
     
     <entry>
+      <title><![CDATA[新文章]]></title>
+      <url>http://yoursite.com/2016/06/28/%E6%96%B0%E6%96%87%E7%AB%A0/</url>
+      <content type="html"><![CDATA[<h1 id="这是新文章"><a href="#这是新文章" class="headerlink" title="这是新文章"></a>这是新文章</h1><h2 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h2><p>我家zhaskldajsdla<br>$$<br>\frac{1}{2}<br>$$</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo静态博客搭建基础—Hexo的安装与设置]]></title>
+      <url>http://yoursite.com/2016/06/26/%E6%90%AD%E5%BB%BAHexo%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B-Hexo%E7%AF%87/</url>
+      <content type="html"><![CDATA[<h1 id="hexo的安装与设置"><a href="#hexo的安装与设置" class="headerlink" title="hexo的安装与设置"></a>hexo的安装与设置</h1><p>hecto的安装非常简单，只需要在</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo静态博客搭建基础--博文里加载本地图片]]></title>
       <url>http://yoursite.com/2016/06/26/Hexo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%9F%BA%E7%A1%80-%E5%8D%9A%E6%96%87%E9%87%8C%E5%8A%A0%E8%BD%BD%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/</url>
       <content type="html"><![CDATA[<h1 id="文章里加载本地图片"><a href="#文章里加载本地图片" class="headerlink" title="文章里加载本地图片"></a>文章里加载本地图片</h1><p>在使用Hexo的过程中，对文章图片的加载比较蛋疼。一般而言，大家都是使用图床，但是图床使用起来一方面比较麻烦，要先上传，再复制链接，有时候还会遇到图床被强或者广告的困扰。对于一些图片不多的文章，完全可以加载本地图片，然后在博文里显示，下面是做法：</p>

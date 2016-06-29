@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="在图片的排版中，我们可以通过在一个图形环境中使用多个小页环境从而得到一个由 多幅图形组成的浮动图形。若将 \caption 命令放到每个小页环境 中，则每个小页环境就生成一浮动图形。例如：1234567891011121314\begin&amp;#123;figure&amp;#125;   \begin&amp;#123;minipage&amp;#125;[t]&amp;#123;0.5\linewidth&amp;#125;     \">
+<meta name="description" content="在图片的排版中，我们可以通过在一个图形环境中使用多个小页环境从而得到一个由 多幅图形组成的浮动图形。若将 \caption 命令放到每个小页环境 中，则每个小页环境就生成一浮动图形。例如：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Latex基础——minipackage使用技巧">
 <meta property="og:url" content="http://yoursite.com/2016/06/29/minipackage使用技巧/index.html">
 <meta property="og:site_name" content="磊哥哥">
-<meta property="og:description" content="在图片的排版中，我们可以通过在一个图形环境中使用多个小页环境从而得到一个由 多幅图形组成的浮动图形。若将 \caption 命令放到每个小页环境 中，则每个小页环境就生成一浮动图形。例如：1234567891011121314\begin&amp;#123;figure&amp;#125;   \begin&amp;#123;minipage&amp;#125;[t]&amp;#123;0.5\linewidth&amp;#125;     \">
+<meta property="og:description" content="在图片的排版中，我们可以通过在一个图形环境中使用多个小页环境从而得到一个由 多幅图形组成的浮动图形。若将 \caption 命令放到每个小页环境 中，则每个小页环境就生成一浮动图形。例如：">
 <meta property="og:image" content="http://www.ctex.org/documents/latex/graphics/img131.gif">
 <meta property="og:image" content="http://www.ctex.org/documents/latex/graphics/img132.gif">
 <meta property="og:image" content="http://www.ctex.org/documents/latex/graphics/img133.gif">
-<meta property="og:updated_time" content="2016-06-29T15:59:26.000Z">
+<meta property="og:updated_time" content="2016-06-29T16:00:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Latex基础——minipackage使用技巧">
-<meta name="twitter:description" content="在图片的排版中，我们可以通过在一个图形环境中使用多个小页环境从而得到一个由 多幅图形组成的浮动图形。若将 \caption 命令放到每个小页环境 中，则每个小页环境就生成一浮动图形。例如：1234567891011121314\begin&amp;#123;figure&amp;#125;   \begin&amp;#123;minipage&amp;#125;[t]&amp;#123;0.5\linewidth&amp;#125;     \">
+<meta name="twitter:description" content="在图片的排版中，我们可以通过在一个图形环境中使用多个小页环境从而得到一个由 多幅图形组成的浮动图形。若将 \caption 命令放到每个小页环境 中，则每个小页环境就生成一浮动图形。例如：">
 <meta name="twitter:image" content="http://www.ctex.org/documents/latex/graphics/img131.gif">
 
 
@@ -354,7 +354,9 @@
       
 
       
-        <p>在图片的排版中，我们可以通过在一个图形环境中使用多个小页环境从而得到一个由 多幅图形组成的浮动图形。若将 <code>\caption</code> 命令放到每个小页环境 中，则每个小页环境就生成一浮动图形。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125; </span><br><span class="line">  \begin&#123;minipage&#125;[t]&#123;0.5\linewidth&#125; </span><br><span class="line">    \centering </span><br><span class="line">    \includegraphics[width=1in]&#123;graphic.eps&#125; </span><br><span class="line">    \caption&#123;Small Box&#125; </span><br><span class="line">    \label&#123;fig:side:a&#125; </span><br><span class="line">  \end&#123;minipage&#125;% </span><br><span class="line">  \begin&#123;minipage&#125;[t]&#123;0.5\linewidth&#125; </span><br><span class="line">    \centering </span><br><span class="line">    \includegraphics[width=1.5in]&#123;graphic.eps&#125; </span><br><span class="line">    \caption&#123;Big Box&#125; </span><br><span class="line">    \label&#123;fig:side:b&#125; </span><br><span class="line">  \end&#123;minipage&#125; </span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>在图片的排版中，我们可以通过在一个图形环境中使用多个小页环境从而得到一个由 多幅图形组成的浮动图形。若将 <code>\caption</code> 命令放到每个小页环境 中，则每个小页环境就生成一浮动图形。例如：</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125; </span><br><span class="line">  \begin&#123;minipage&#125;[t]&#123;0.5\linewidth&#125; </span><br><span class="line">    \centering </span><br><span class="line">    \includegraphics[width=1in]&#123;graphic.eps&#125; </span><br><span class="line">    \caption&#123;Small Box&#125; </span><br><span class="line">    \label&#123;fig:side:a&#125; </span><br><span class="line">  \end&#123;minipage&#125;% </span><br><span class="line">  \begin&#123;minipage&#125;[t]&#123;0.5\linewidth&#125; </span><br><span class="line">    \centering </span><br><span class="line">    \includegraphics[width=1.5in]&#123;graphic.eps&#125; </span><br><span class="line">    \caption&#123;Big Box&#125; </span><br><span class="line">    \label&#123;fig:side:b&#125; </span><br><span class="line">  \end&#123;minipage&#125; </span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure>
 <center><br><img src="http://www.ctex.org/documents/latex/graphics/img131.gif" alt=""><br></center>
 
 <p>生成图 27.3 和 27.4。尽管上面的命令 只使用了一个 figure 环境，但由于每个小页中都包含一 个 <code>\caption</code> 命令，所以仍然得到两个浮动图形。</p>

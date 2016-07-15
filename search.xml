@@ -8,6 +8,7 @@
       <url>http://yoursite.com/2016/07/15/Python%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86-%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%8F%96%E5%92%8C%E6%93%8D%E4%BD%9C/</url>
       <content type="html"><![CDATA[<h1 id="关于python文件读取和操作"><a href="#关于python文件读取和操作" class="headerlink" title="关于python文件读取和操作"></a>关于python文件读取和操作</h1><p>总是记不住API。昨晚写的时候用到了这些，但是没记住，于是就索性整理一下吧：</p>
 <p><strong>python中对文件、文件夹os模块和shutil模块。</strong></p>
+<a id="more"></a>
 <p>得到当前工作目录，即当前Python脚本工作的目录路径: <strong>os.getcwd()</strong></p>
 <p>返回指定目录下的所有文件和目录名:<strong>os.listdir()</strong></p>
 <p>函数用来删除一个文件:<strong>os.remove()</strong></p>

@@ -94,17 +94,18 @@
 <meta property="og:description" content="最近迷上了Lorenz attractor，于是在闲暇时间，用Python做了Lorenz attractor的动画仿真，结果还是不错的。
 什么是Lorenz attractor简单来说，Lorenz attractor 是一个混沌的动力系统，系统对初始值非常敏感，即使初始值非常小的不同，随着时间演化，到最后能造成极大的差别。
 这个动力系统首先由法国天气学家Lorenz发现。他在研究天气动力系统时">
+<meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/5f993e17e16f1c3ea4ad7031353c61164a226bb8">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79gw1f6a24ygvqgj30qg0kxah3.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79gw1f6a24vzii6j30m80goadj.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79gw1f6a24up0nvg30a006okjv.gif">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79gw1f6a24n1n02g30hs0b44r3.gif">
-<meta property="og:updated_time" content="2016-07-28T16:01:51.000Z">
+<meta property="og:updated_time" content="2016-07-28T19:47:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Python做Lorenz attrator的动画仿真">
 <meta name="twitter:description" content="最近迷上了Lorenz attractor，于是在闲暇时间，用Python做了Lorenz attractor的动画仿真，结果还是不错的。
 什么是Lorenz attractor简单来说，Lorenz attractor 是一个混沌的动力系统，系统对初始值非常敏感，即使初始值非常小的不同，随着时间演化，到最后能造成极大的差别。
 这个动力系统首先由法国天气学家Lorenz发现。他在研究天气动力系统时">
-<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/006tNc79gw1f6a24ygvqgj30qg0kxah3.jpg">
+<meta name="twitter:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/5f993e17e16f1c3ea4ad7031353c61164a226bb8">
 
 
 
@@ -383,13 +384,15 @@
         <p>最近迷上了Lorenz attractor，于是在闲暇时间，用Python做了Lorenz attractor的动画仿真，结果还是不错的。</p>
 <h2 id="什么是Lorenz-attractor"><a href="#什么是Lorenz-attractor" class="headerlink" title="什么是Lorenz attractor"></a>什么是Lorenz attractor</h2><p>简单来说，Lorenz attractor 是一个混沌的动力系统，系统对初始值非常敏感，即使初始值非常小的不同，随着时间演化，到最后能造成极大的差别。</p>
 <p>这个动力系统首先由法国天气学家Lorenz发现。他在研究天气动力系统时，提出了一个非常简单的模型：</p>
+<center><br><br><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5f993e17e16f1c3ea4ad7031353c61164a226bb8" alt="Lorenz"><br><br></center>
+
 <a id="more"></a>
 <p>这组方程描述了大气里温度梯度，各处压强，流速等信息，但对真实情况做了太多的假设和简化，在物理上并没有参考意义，是一个“玩具模型”。但在数学上，却带了了非常有意思的发现。</p>
 <p>Lorenz在一次计算时，在两组初始值相差非常小的情况下，他惊奇的发现随着时间演化，两组结果竟然产生了翻天覆地的变化，甚至截然不同。由相同方程支配的系统竟然在初始值差别非常小的情况下产生巨大的不同，这是反直觉的，正如在他随后的论文中诗意地写道：</p>
 <p>于是Lorenz attractor又被称为蝴蝶效应。</p>
 <p>这里需要提一下，大家在电影里看到的蝴蝶效应，是艺术家对这一现象的诗意表达，并不是真实发生的现象。</p>
 <h2 id="Python求解"><a href="#Python求解" class="headerlink" title="Python求解"></a>Python求解</h2><p>首先，我们将求解以下方程：</p>
-<p>我们取p=10, r=30, b=3, 两组初始值分别是（0，1，0）和（0，1，0.0000001），差别非常小！！！</p>
+<p>$$<br>\frac{dX}{dt}=p(Y-X)\\<br>\frac{dY}{dt}=X(r-Z)-Y\\<br>\frac{dZ}{dt}=XY-bZ<br>$$<br>我们取p=10, r=30, b=3, 两组初始值分别是（0，1，0）和（0，1，0.0000001），差别非常小！！！</p>
 <p>Python里，我们利用<code>scipy.integrate</code>模块下的<code>odeint</code>函数进行求解，具体的使用方法可以参看scipy的的documentation。</p>
 <p>代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.integrate <span class="keyword">import</span> odeint </span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lorenz</span><span class="params">(w,t,p,r,b)</span>:</span> <span class="comment">#定义求解的系统，返回函数组</span></span><br><span class="line">    x,y,z=w</span><br><span class="line">    <span class="keyword">return</span> np.array([p*(y-x),x*(r-z),x*y-b*z])</span><br><span class="line">t =np.arange(<span class="number">0</span>,<span class="number">50</span>,<span class="number">0.01</span>)<span class="comment">#定义求解区间，求解50s，时间间隔0.01s</span></span><br><span class="line">track1=odeint(lorenz, (<span class="number">0.0</span>, <span class="number">1.00</span>, <span class="number">0.000000001</span>),t,args=(<span class="number">10.0</span>,<span class="number">30.0</span>,<span class="number">3.0</span>))<span class="comment">#得到结果</span></span><br><span class="line">track2=odeint(lorenz, (<span class="number">0.0</span>, <span class="number">1.00</span>, <span class="number">0.0</span>),t,args=(<span class="number">10.0</span>,<span class="number">30.0</span>,<span class="number">3.0</span>))</span><br></pre></td></tr></table></figure>

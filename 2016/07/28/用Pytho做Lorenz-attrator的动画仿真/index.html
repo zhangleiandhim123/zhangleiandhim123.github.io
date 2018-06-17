@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="-python -VPython -Lorenz attractor仿真," />
+  <meta name="keywords" content="python,VPython,Lorenz attractor仿真," />
 
 
 
@@ -97,9 +97,9 @@
 <meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/5f993e17e16f1c3ea4ad7031353c61164a226bb8">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79gw1f6a24ygvqgj30qg0kxah3.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79gw1f6a24vzii6j30m80goadj.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79gw1f6a24up0nvg30a006okjv.gif">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79gw1f6a9nmvtv1g30hs0b47wj.gif">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79gw1f6a24n1n02g30hs0b44r3.gif">
-<meta property="og:updated_time" content="2016-07-28T19:47:32.000Z">
+<meta property="og:updated_time" content="2016-07-29T17:31:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Python做Lorenz attrator的动画仿真">
 <meta name="twitter:description" content="最近迷上了Lorenz attractor，于是在闲暇时间，用Python做了Lorenz attractor的动画仿真，结果还是不错的。
@@ -313,7 +313,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-28T11:28:01+02:00" content="2016-07-28">
+            <time itemprop="dateCreated" datetime="2016-07-28T11:28:01+08:00" content="2016-07-28">
               2016-07-28
             </time>
           </span>
@@ -327,8 +327,20 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/python-有趣的数学/" itemprop="url" rel="index">
-                    <span itemprop="name">-python -有趣的数学</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/python/有趣的数学/" itemprop="url" rel="index">
+                    <span itemprop="name">有趣的数学</span>
                   </a>
                 </span>
 
@@ -409,7 +421,7 @@
 <p>代码也很简单，主要用了<code>matplotlib.animation</code>里的<code>FuncAnimation</code>函数，代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> mpl_toolkits.mplot3d <span class="keyword">import</span> Axes3D</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> animation <span class="comment">#这个包用于动画制作</span></span><br><span class="line"></span><br><span class="line">ax=Axes3D(fig)<span class="comment">#生成3D的轴</span></span><br><span class="line">line1=ax.plot([],[],<span class="string">'b:'</span>)<span class="comment">#初始化数据，line是估计，point是轨迹的头部</span></span><br><span class="line">point1=ax.plot([],[],<span class="string">'bo'</span>,markersize=<span class="number">10</span>)</span><br><span class="line">line2=ax.plot([],[],<span class="string">'r:'</span>)</span><br><span class="line">point2=ax.plot([],[],<span class="string">'ro'</span>,markersize=<span class="number">10</span>)</span><br><span class="line">images=[]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init</span><span class="params">()</span>:</span><span class="comment">#该函数用于初始化动画</span></span><br><span class="line">    line1=ax.plot([],[],<span class="string">'b:'</span>,markersize=<span class="number">8</span>)</span><br><span class="line">    point1=ax.plot([],[],<span class="string">'bo'</span>,markersize=<span class="number">10</span>)</span><br><span class="line">    line2=ax.plot([],[],<span class="string">'r:'</span>,markersize=<span class="number">8</span>)</span><br><span class="line">    point2 = ax.plot([], [], <span class="string">'ro'</span>, markersize=<span class="number">10</span>）</span><br><span class="line">    <span class="keyword">return</span> line1,point1,line2,point2</span><br><span class="line">                     </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">anmi</span><span class="params">(i)</span>:</span><span class="comment">#anmi函数用于每一帧的数据更新，i是帧数。</span></span><br><span class="line">    ax.clear()</span><br><span class="line">    line1=ax.plot(track1[<span class="number">0</span>:<span class="number">10</span>*i,<span class="number">0</span>],track1[<span class="number">0</span>:<span class="number">10</span>*i,<span class="number">1</span>],track1[<span class="number">0</span>:<span class="number">10</span>*i,<span class="number">2</span>],<span class="string">'b:'</span>, markersize=<span class="number">8</span>)</span><br><span class="line">    point1 = ax.plot(track1[<span class="number">10</span>*i<span class="number">-1</span>:<span class="number">10</span>*i,<span class="number">0</span>],track1[<span class="number">10</span>*i<span class="number">-1</span>:<span class="number">10</span>*i,<span class="number">1</span>],track1[<span class="number">10</span>*i<span class="number">-1</span>:<span class="number">10</span>*i,<span class="number">2</span>],<span class="string">'bo'</span>, markersize=<span class="number">10</span>)</span><br><span class="line">    line2 = ax.plot(track2[<span class="number">0</span>:<span class="number">10</span>*i, <span class="number">0</span>], track2[<span class="number">0</span>:<span class="number">10</span>*i, <span class="number">1</span>], track2[<span class="number">0</span>:<span class="number">10</span>*i, <span class="number">2</span>], <span class="string">'r:'</span>,markersize=<span class="number">8</span>)</span><br><span class="line">    point2 = ax.plot(track2[<span class="number">10</span>*i<span class="number">-1</span>:<span class="number">10</span> * i, <span class="number">0</span>], track2[<span class="number">10</span>*i<span class="number">-1</span>:<span class="number">10</span> * i, <span class="number">1</span>], track2[<span class="number">10</span>*i<span class="number">-1</span>:<span class="number">10</span> * i, <span class="number">2</span>], <span class="string">'ro'</span>, markersize=<span class="number">10</span>)</span><br><span class="line">    <span class="keyword">return</span> line1,point1,line2,point2</span><br><span class="line"></span><br><span class="line"><span class="comment">#animation.FuncAnimation用于动画制作，输入init函数和anmi函数，frams是帧数，一共画500祯，interval是相邻祯的间隔，单位是毫秒，此处为2毫秒</span></span><br><span class="line">anim = animation.FuncAnimation(fig, anmi, init_func=init,</span><br><span class="line">                              frames=<span class="number">500</span>, interval=<span class="number">2</span>, blit=<span class="keyword">False</span>,repeat=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
-<center><br><br><img src="http://ww1.sinaimg.cn/large/006tNc79gw1f6a24up0nvg30a006okjv.gif" alt="LorenzAnimation.gif"><br><br></center>
+<center><br><br><img src="http://ww2.sinaimg.cn/large/006tNc79gw1f6a9nmvtv1g30hs0b47wj.gif" alt="3-iloveimg-compressed.gif"><br><br></center>
 
 <p>在这个动画里，我们清楚的看到混沌现象，两个小球初期值仅仅相差0.000001，结果在29s左右的时候竟然按照相反的轨迹演绎，之后轨迹也不会重合，非常有意思！</p>
 <h2 id="用VPython进行3D实物动画模拟仿真"><a href="#用VPython进行3D实物动画模拟仿真" class="headerlink" title="用VPython进行3D实物动画模拟仿真"></a>用VPython进行3D实物动画模拟仿真</h2><p>到目前为止，虽然动画的结果基本满意，也准确反应了Lorenz Attractor的特性。但对于追求精益求精的工程师，目前的3D动画有点太过简陋了，要是有更美、更漂亮的3D实物动画，那就更好了。</p>
@@ -464,7 +476,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python-VPython-Lorenz-attractor仿真/" rel="tag">#-python -VPython -Lorenz attractor仿真</a>
+            <a href="/tags/python/" rel="tag">#python</a>
+          
+            <a href="/tags/VPython/" rel="tag">#VPython</a>
+          
+            <a href="/tags/Lorenz-attractor仿真/" rel="tag">#Lorenz attractor仿真</a>
           
         </div>
       
@@ -480,6 +496,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/29/学法语的学霸看过来-一步步教你用python编自己的法语词典/" rel="prev" title="学法语的学霸看过来--一步步教你用python编自己的法语词典">
+                学法语的学霸看过来--一步步教你用python编自己的法语词典 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -574,7 +594,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -582,7 +602,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -591,7 +611,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -686,7 +706,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
